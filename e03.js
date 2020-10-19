@@ -1,11 +1,13 @@
 function sortBySelection(array = [], i=0)
 {   
     let tmp = array[i];
+    let min = i;
+
     if(array[i] == null)
     {
         return array;
     }
-    let min = i;
+
     for (let y=i; y<array.length;y++)
     {
         if(array[y] < array[min])
@@ -13,8 +15,10 @@ function sortBySelection(array = [], i=0)
             min = y ;
         }
     }
+    
     array[i] = array[min];
     array[min] = tmp;
+
    return sortBySelection(array, i+1)
 }
 

@@ -11,12 +11,14 @@ function sortByInsert(array = [], i=1)
     {
         array[i] = array[i-1];
         array[i-1] = temp;
+        
         return sortByInsert(array,i);
     }
     else if(array[i] > array[i+1])
     {
         array[i] = array[i+1];
         array[i+1] = temp;
+
         return sortByInsert(array,i); 
     }
     else
